@@ -17,6 +17,7 @@ This version finalizes all changes from the beta and release candidate cycles an
 **Highlights**
 
 * [iOS/macOS] Migrated to the Vision API with a unified Apple codebase.
+* [iOS] Minimum iOS version changed from 15 to 12.
 * [Android] Removed dependency on `kotlin-bom` and updated CameraX and camera-camera2 dependencies.
 * Support for pause/resume functionality across platforms.
 * `MobileScannerErrorCode` now includes readable error messages in debug mode.
