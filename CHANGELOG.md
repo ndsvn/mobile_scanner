@@ -73,7 +73,7 @@ Bugs fixed:
 * This release requires Flutter 3.29.0 or higher.
 
 Bugs fixed:
-* [Android] Fixed a timing issue for the SurfaceProducer implementation, by switching to the `onSurfaceCleanup` callback. 
+* [Android] Fixed a timing issue for the SurfaceProducer implementation, by switching to the `onSurfaceDestroyed` callback. 
 
 ## 7.0.0-beta.8
 

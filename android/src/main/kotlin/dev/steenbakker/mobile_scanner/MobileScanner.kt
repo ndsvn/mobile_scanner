@@ -228,12 +228,12 @@ class MobileScanner(
                 // when they get destroyed.
                 surfaceProducer.setCallback(
                     object : TextureRegistry.SurfaceProducer.Callback {
-                        override fun onSurfaceAvailable() {
+                        override fun onSurfaceCreated() {
                             // Do nothing. The Preview.SurfaceProvider will handle this
                             // whenever a new Surface is needed.
                         }
 
-                        override fun onSurfaceCleanup() {
+                        override fun onSurfaceDestroyed() {
                             // Invalidate the SurfaceRequest so that CameraX knows to to make a new request
                             // for a surface.
                             request.invalidate()
@@ -499,7 +499,7 @@ class MobileScanner(
                     if (portrait) height else width,
                     deviceOrientationListener.getUIOrientation().serialize(),
                     sensorRotationDegrees,
-                    surfaceProducer!!.handlesCropAndRotation(),
+                    false,
                     currentTorchState,
                     surfaceProducer!!.id(),
                     numberOfCameras ?: 0,

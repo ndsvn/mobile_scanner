@@ -134,7 +134,7 @@ class BarcodePainter extends CustomPainter {
       const Radius.circular(6),
     );
 
-    final textBgPaint = Paint()..color = Colors.white.withValues(alpha: 0.8);
+    final textBgPaint = Paint()..color = Colors.white.withOpacity(0.8);
     canvas.drawRRect(textBackground, textBgPaint);
 
     textPainter.paint(

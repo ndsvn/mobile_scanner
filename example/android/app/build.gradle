@@ -24,8 +24,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "dev.steenbakker.mobile_scanner_example"
+    ndkVersion "25.1.8937393"
     compileSdk 35
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -44,7 +44,6 @@ android {
         applicationId "dev.steenbakker.mobile_scanner_example"
         minSdkVersion 24
         targetSdkVersion 35
-        ndkVersion flutter.ndkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
